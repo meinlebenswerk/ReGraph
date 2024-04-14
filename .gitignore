@@ -3,6 +3,7 @@ dist/*
 ReGraph.egg-info/
 regraph/library/__pycache__/
 venv/*
+.venv/*
 regraph/__pycache__/
 tests/__pycache__/
 tests/*.png

@@ -23,7 +23,7 @@ from .cypher_utils import rewriting
 class Neo4jGraph(Graph):
     """Class implementing Neo4j graph instance.
 
-    This class encapsulates neo4j.v1.GraphDatabase object.
+    This class encapsulates neo4j.GraphDatabase object.
     It provides an interface for accessing graph sitting
     in the DB. This interface is similar (in fact is
     intended to be as similar as possible) to the
@@ -31,7 +31,7 @@ class Neo4jGraph(Graph):
 
     Attributes
     ----------
-    _driver :  neo4j.v1.GraphDatabase
+    _driver :  neo4j.GraphDatabase
         Driver providing connection to a Neo4j database
     _node_label : str
         Label of nodes inducing the manipulated subgraph.
@@ -48,7 +48,7 @@ class Neo4jGraph(Graph):
 
         Parameters
         ----------
-        driver : neo4j.v1.direct.DirectDriver, optional
+        driver : neo4j.direct.DirectDriver, optional
             Driver providing connection to a Neo4j database
         uri : str, optional
             Uri for a new Neo4j database connection (bolt)
@@ -501,7 +501,7 @@ class Neo4jGraph(Graph):
 
         Parameters
         ----------
-        driver : neo4j.v1.direct.DirectDriver, optional
+        driver : neo4j.direct.DirectDriver, optional
             Driver providing connection to a Neo4j database
         uri : str, optional
             Uri for a new Neo4j database connection (bolt)

@@ -865,7 +865,7 @@ class Neo4jHierarchy(Hierarchy):
             Username for Neo4j database connection
         password : str, optional
             Password for Neo4j database connection
-        driver : neo4j.v1.direct.DirectDriver, optional
+        driver : neo4j.direct.DirectDriver, optional
             Driver providing connection to a Neo4j database.
         graph_label : str, optional
             Label to use for skeleton nodes representing graphs.
@@ -943,7 +943,7 @@ class Neo4jHierarchy(Hierarchy):
             Username for Neo4j database connection
         password : str, optional
             Password for Neo4j database connection
-        driver : neo4j.v1.direct.DirectDriver, optional
+        driver : neo4j.direct.DirectDriver, optional
             DB driver object
         json_data : dict, optional
             JSON-like dict containing representation of a hierarchy
@@ -1070,7 +1070,7 @@ class Neo4jHierarchy(Hierarchy):
 class TypedNeo4jGraph(Neo4jHierarchy):
     """Class implementing two level hiearchy.
 
-    This class encapsulates neo4j.v1.GraphDatabase object.
+    This class encapsulates neo4j.GraphDatabase object.
     It provides an interface for accessing typed graphs
     accommodated in the Neo4j DB. Our system is assumed to
     consist of two graphs (the data graph) and (the schema graph)
@@ -1079,7 +1079,7 @@ class TypedNeo4jGraph(Neo4jHierarchy):
 
     Attributes
     ----------
-    _driver :  neo4j.v1.GraphDatabase
+    _driver :  neo4j.GraphDatabase
         Driver providing connection to a Neo4j database
     _graph_label : str
     _typing_label : str
@@ -1113,7 +1113,7 @@ class TypedNeo4jGraph(Neo4jHierarchy):
             Neo4j database user id
         password : str, optional
             Neo4j database password
-        driver : neo4j.v1.direct.DirectDriver, optional
+        driver : neo4j.direct.DirectDriver, optional
         graph_label : str, optional
             Label to use for skeleton nodes representing graphs.
         typing_label : str, optional
